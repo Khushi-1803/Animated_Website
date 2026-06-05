@@ -3,6 +3,8 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Agence from './pages/Agence'
 import Projects from './pages/projects'
+import Navbar from './components/Navigation/Navbar'
+import FullscreenNav from './components/Navigation/FullscreenNav'
 
 
 const App = () => {
@@ -10,7 +12,8 @@ const App = () => {
   
   return (
     <div>
-     
+     <Navbar/>
+     <FullscreenNav/>
       <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/agence" element={<Agence/>}/>
