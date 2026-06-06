@@ -79,3 +79,4 @@ const Stairs = (props) => {
 }
 
 export default Stairs
+

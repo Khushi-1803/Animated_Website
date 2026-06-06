@@ -1,3 +1,5 @@
+
+
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
@@ -19,29 +21,6 @@ const Agence = () => {
     "https://k72.ca/images/teamMembers/joel_480X640_3.jpg?w=480&h=640&fit=crop&s=1cadbf143b3aa916b1b414464acbb4d6",
   ];
 
-  // useGSAP(function () {
-  //   gsap.to(imageDivRef.current, {
-  //     scrollTrigger: {
-  //       trigger: imageDivRef.current,
-  //       markers: true,
-  //       start: "top 29%",
-  //       end: "top -100%",
-  //       scrub: true,
-  //       pin: true,
-  //       onUpdate: (elem) => {
-  //         let imageIndex;
-  //         if(elem.progress){
-  //           const imageIndex = Math.floor(elem.progress * imageArray.length);
-  //         }
-  //         else{
-  //           imageIndex = imageArray.length-1
-  //         }
-  //         imageRef.current.src = imageArray[imageIndex];
-  //       },
-  //     },
-  //   });
-  // });
-
   useGSAP(() => {
     gsap.to(imageDivRef.current, {
       scrollTrigger: {
@@ -52,16 +31,14 @@ const Agence = () => {
         pinSpacing: true,
         pinReparent: true,
         pinType: "transform",
-        scrub: 1, // smooth scrubbing with 1s easing
+        scrub: 1,
         anticipatePin: 1,
         invalidateOnRefresh: true,
-
         onUpdate: (elem) => {
           let imageIndex = Math.min(
             imageArray.length - 1,
-            Math.floor(elem.progress * imageArray.length),
+            Math.floor(elem.progress * imageArray.length)
           );
-
           imageRef.current.src = imageArray[imageIndex];
         },
       },
@@ -73,22 +50,22 @@ const Agence = () => {
       <div className="section-1 relative py-1">
         <div
           ref={imageDivRef}
-          className="h-[20vw] w-[15vw] rounded-3xl overflow-hidden absolute top-64 left-[30vw]"
+          className="h-[20vw] w-[15vw] md:h-[30vw] md:w-[20vw] sm:h-[50vw] sm:w-[40vw] rounded-3xl overflow-hidden absolute top-[16vw] md:top-[20vw] sm:top-[25vw] left-[30vw] md:left-[25vw] sm:left-[10vw]"
         >
           <img
             ref={imageRef}
             className="h-full w-full object-cover"
-            src="https://k72.ca/images/teamMembers/Carl_480x640.jpg?w=480&h=640&fit=crop&s=f0a84706bc91a6f505e8ad35f520f0b7"
+            src={imageArray[0]}
           />
         </div>
         <div className="font-[font2] relative">
-          <div className="mt-[65vh]">
-            <h1 className="text-[20vw] text-center uppercase leading-[17vw]">
+          <div className="mt-[65vh] md:mt-[60vh] sm:mt-[55vh]">
+            <h1 className="text-[20vw] md:text-[15vw] sm:text-[30vw] text-center uppercase leading-[17vw] md:leading-[12vw] sm:leading-[25vw]">
               Seven7y <br /> two
             </h1>
           </div>
-          <div className="pl-[40%]">
-            <p className="text-5xl mt-5">
+          <div className="pl-[40%] md:pl-[25%] sm:pl-[5%]">
+            <p className="text-5xl md:text-3xl sm:text-2xl mt-5">
               &emsp;&emsp;&emsp;&emsp;We’re inquisitive and open-minded, and we
               make sure creativity crowds out ego from every corner. A brand is
               a living thing, with values, a personality and a story. If we
