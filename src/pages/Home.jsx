@@ -1,3 +1,5 @@
+
+
 import React from 'react'
 import Video from '../components/home/video.jsx'
 import HomeTop from '../components/home/homeTop.jsx'
@@ -9,9 +11,10 @@ const Home = () => {
       <div className='h-screen w-screen fixed'>
         <Video />
       </div>
-      <div className='h-screen w-screen relative pb-5 overflow-hidden flex flex-col justify-between'>
-        <HomeTop/>
-        <HomeBottom/>
+
+      <div className='min-h-screen w-screen relative pb-5 flex flex-col justify-between'>
+        <HomeTop />
+        <HomeBottom />
       </div>
     </div>
   )

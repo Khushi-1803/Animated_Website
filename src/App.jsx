@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Agence from './pages/Agence'
-import Projects from './pages/projects'
+import Projects from "./pages/Projects";
 import Navbar from './components/Navigation/Navbar'
 import FullscreenNav from './components/Navigation/FullscreenNav'
 
