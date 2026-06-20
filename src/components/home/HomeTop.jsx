@@ -1,6 +1,6 @@
 
 import React from "react";
-import Video from "./video";
+import Video from "./Video";
 
 const HomeTop = () => {
   return (

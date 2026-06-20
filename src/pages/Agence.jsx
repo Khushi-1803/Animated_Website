@@ -3,7 +3,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { useRef, React } from "react";
+import React, { useRef } from "react";
 
 const Agence = () => {
   gsap.registerPlugin(ScrollTrigger);

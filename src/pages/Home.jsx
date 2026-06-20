@@ -1,9 +1,9 @@
 
 
 import React from 'react'
-import Video from '../components/home/video.jsx'
-import HomeTop from '../components/home/homeTop.jsx'
-import HomeBottom from '../components/home/homeBottom.jsx'
+import Video from '../components/home/Video.jsx'
+import HomeTop from '../components/home/HomeTop.jsx'
+import HomeBottom from '../components/home/HomeBottom.jsx'
 
 const Home = () => {
   return (
